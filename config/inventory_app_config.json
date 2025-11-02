@@ -13,10 +13,10 @@
 		},
 		"connection":{
 			"config":{
-				"database": "database_name",
-				"user": "database_username",
+				"database": "inventory",
+				"user": "root",
 				"host": "localhost",
-				"port": 8889
+				"port": 3306
 			}
 		}
 	}
