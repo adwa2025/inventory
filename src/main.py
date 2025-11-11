@@ -3,7 +3,7 @@
 import json
 from argparse import ArgumentParser
 from inventory.presentation_layer.user_interface import UserInterface
-
+from inventory.persistence_layer.mysql_persistence_wrapper import MySQLPersistenceWrapper
 
 
 def main():
@@ -15,8 +15,19 @@ def main():
 		with open(args.configfile, 'r') as f:
 			config = json.loads(f.read())
 
-	ui = UserInterface(config)
-	ui.start()
+	# initiate the mysql connection
+	db = MySQLPersistenceWrapper(config)
+	suppliers_list = db.select_all_suppliers()
+	for supplier in suppliers_list:
+		print(f"{supplier}")
+
+	print("*"*40)
+	suppliers_list = db.select_all_suppliers()
+	for supplier in suppliers_list:
+		print(f"Supplier {supplier[0]}: {supplier[1]}") # Supplier 1: 
+		parts = db.select_all_parts_for_supplier_id(supplier[0])
+		for part in parts:
+			print(f"{part}")
 			
 		
 

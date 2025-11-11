@@ -1,0 +1,7 @@
+DEBUG:MySQLPersistenceWrapper:2025-11-02 17:38:41,434:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 17:38:41,434:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 17:38:41,434:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 17:38:41,513:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-02 17:38:41,513:__init__:It works!
+DEBUG:UserInterface:2025-11-02 17:38:41,513:__init__:It works!
+DEBUG:UserInterface:2025-11-02 17:38:41,513:start: User interface started!

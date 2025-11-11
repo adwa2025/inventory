@@ -34,12 +34,70 @@ class MySQLPersistenceWrapper(ApplicationBase):
 		
 
 		# SQL String Constants
+		self.SELECT_ALL_SUPPLIERS = \
+			"SELECT id, name, location FROM suppliers"
+		
+		self.SELECT_ALL_SUPPLIERS_WITH_PARTS = \
+			f"SELECT s.name AS Supplier, p.name AS Part, x.price, x.lead_time " \
+			f"FROM suppliers s, parts p, supply_xref x " \
+			f"WHERE x.supplier_id = s.id AND x.part_id = p.id"
+		
+		self.SELECT_ALL_PARTS_FOR_SUPPLIER_ID = \
+			f"SELECT id, name, description, price, lead_time " \
+			f"FROM parts, supply_xref " \
+			f"WHERE (supplier_id = %s) AND (parts.id = part_id)"
 
 
 
 
 
 	# MySQLPersistenceWrapper Methods
+	def select_all_suppliers(self)->list:
+		"""Selects all suppliers from the database."""
+		cursor = None
+		results = None
+		try:
+			connection = self._connection_pool.get_connection()
+			with connection:
+				cursor = connection.cursor()
+				with cursor:
+					cursor.execute(self.SELECT_ALL_SUPPLIERS)
+					results = cursor.fetchall()
+			return results
+		except Exception as e:
+			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: Problem selecting all suppliers: {e}')
+
+	def select_all_suppliers_with_parts(self)->list:
+		"""Selects all suppliers with their parts from the database."""
+		cursor = None
+		results = None
+		try:
+			connection = self._connection_pool.get_connection()
+			with connection:
+				cursor = connection.cursor()
+				with cursor:
+					cursor.execute(self.SELECT_ALL_SUPPLIERS_WITH_PARTS)
+					results = cursor.fetchall()
+			return results
+		except Exception as e:
+			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: Problem selecting all suppliers with parts: {e}')
+	
+	def select_all_parts_for_supplier_id(self, supplier_id:int)->list:
+		"""Selects all parts for a given supplier ID from the database."""
+		cursor = None
+		results = None
+		try:
+			connection = self._connection_pool.get_connection()
+			with connection:
+				cursor = connection.cursor()
+				with cursor:
+					cursor.execute(self.SELECT_ALL_PARTS_FOR_SUPPLIER_ID, (supplier_id,))
+					results = cursor.fetchall()
+			return results
+		except Exception as e:
+			self._logger.log_error(f'{inspect.currentframe().f_code.co_name}: Problem selecting all parts for supplier ID {supplier_id}: {e}')
+
+
 
 
 
