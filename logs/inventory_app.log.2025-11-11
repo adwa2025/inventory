@@ -1,0 +1,52 @@
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:39:48,035:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:39:48,037:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:39:48,037:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:39:48,138:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:40:25,665:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:40:25,665:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:40:25,668:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:40:25,748:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-11 15:40:25,748:__init__:It works!
+DEBUG:UserInterface:2025-11-11 15:40:25,748:__init__:It works!
+DEBUG:UserInterface:2025-11-11 15:40:25,749:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:40:35,695:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:40:35,696:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:40:35,696:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:40:35,767:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:41:57,577:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:41:57,577:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:41:57,577:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:41:57,652:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:42:10,139:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:42:10,139:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:42:10,139:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:42:10,208:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:44:03,083:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:44:03,084:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:44:03,084:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:44:03,157:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:46:44,313:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:46:44,313:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:46:44,313:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-11 15:46:44,386:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 16:52:56,567:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 16:52:56,567:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 16:52:56,568:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2025-11-11 16:52:56,637:_initialize_database_connection_pool: Problem creating connection pool: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+ERROR:MySQLPersistenceWrapper:2025-11-11 16:52:56,637:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "app_name_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "inventory", "user": "root", "host": "localhost", "port": 3306}}}
+ERROR:MySQLPersistenceWrapper:2025-11-11 16:52:56,638:select_all_suppliers: Problem selecting all suppliers: 'NoneType' object has no attribute 'get_connection'
+DEBUG:MySQLPersistenceWrapper:2025-11-11 16:53:23,731:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 16:53:23,731:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 16:53:23,731:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2025-11-11 16:53:23,793:_initialize_database_connection_pool: Problem creating connection pool: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+ERROR:MySQLPersistenceWrapper:2025-11-11 16:53:23,793:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "app_name_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "inventory", "user": "root", "host": "localhost", "port": 3306}}}
+ERROR:MySQLPersistenceWrapper:2025-11-11 16:53:23,793:select_all_suppliers: Problem selecting all suppliers: 'NoneType' object has no attribute 'get_connection'
+DEBUG:MySQLPersistenceWrapper:2025-11-11 16:53:41,969:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-11 16:53:41,970:__init__: DB Connection Config Dict: {'database': 'inventory', 'user': 'root', 'host': 'localhost', 'port': 3306}
+DEBUG:MySQLPersistenceWrapper:2025-11-11 16:53:41,970:Creating connection pool...
+ERROR:MySQLPersistenceWrapper:2025-11-11 16:53:42,038:_initialize_database_connection_pool: Problem creating connection pool: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+ERROR:MySQLPersistenceWrapper:2025-11-11 16:53:42,038:_initialize_database_connection_pool: Check DB cnfg:
+{"pool": {"name": "app_name_db_bool", "size": 10, "reset_session": true, "use_pure": true}, "connection": {"config": {"database": "inventory", "user": "root", "passowrd": "root", "host": "localhost", "port": 3306}}}
+ERROR:MySQLPersistenceWrapper:2025-11-11 16:53:42,038:select_all_suppliers: Problem selecting all suppliers: 'NoneType' object has no attribute 'get_connection'

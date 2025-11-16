@@ -15,7 +15,7 @@
 			"config":{
 				"database": "inventory",
 				"user": "root",
-				"passowrd": "root",
+				"password": "root",
 				"host": "localhost",
 				"port": 3306
 			}
